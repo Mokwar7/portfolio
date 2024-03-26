@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    user-select: none
+}
+
+* {
+    transition: 0.3s ease-in-out;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #465DFF;
+    color: #fff;
+}
+
+.header__container {
+    height: 60px;
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 95%;
+}
+
+.header__logo-link {
+    height: 50px;
+}
+
+.header__logo {
+    width: 50px;
+}
+
+.header__logo:hover {
+    opacity: 0.7;
+}
+
+.header__nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header__link {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header__link:hover {
+    opacity: 0.7;
+}
+
+.section__header {
+    font-size: 40px;
+    margin: 50px 0 0;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+main {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto 100px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__container {
+    width: 100%;
+}
+
+.main__header {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 30px 0 30px;
+}
+
+.main__grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.grid__container {
+    width: 232px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grid__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.grid__header {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.main__span {
+    margin: 30px 0;
+    width: 100%;
+    height: 0.5px;
+    background-color: #0a0a0a3d;
+}
+
+@media screen and (max-width: 1364px) {
+    .main__grid {
+        gap: 2%;
+        row-gap: 30px;
+    }
+
+    .grid__container {
+        width: 18.4%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main__grid {
+        gap: 5%;
+        row-gap: 30px;
+    }
+
+    .grid__container {
+        width: 47.5%;
+    }
+}
+
+.view {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.view.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.view__img {
+    height: 70vh;
+    cursor: default;
+}
